@@ -6,11 +6,11 @@
         "label": "testMake", // 任务名字
         "command": "gcc", // 执行的命令
         "args": [
-         // "-g",  // 加上这行就是debug 模式
+          "-g",  // 加上这行就是debug 模式
           "${file}",
           "-o",
-          "${fileDirname}/${fileBasenameNoExtension}.o"
-        ],
+          "${workspaceFolder}/output/${fileBasenameNoExtension}.o"
+        ], // gcc -g hello.c -o   "${fileDirname}/output/${fileBasenameNoExtension}.o"
         "options": {
           "cwd": "${workspaceFolder}"
         },

@@ -8,7 +8,7 @@
         "name": "g++ Build and debug active file",
         "type": "cppdbg",
         "request": "launch",
-        "program": "${workspaceFolder}/src/${fileBasenameNoExtension}",
+        "program": "${workspaceFolder}/output/${fileBasenameNoExtension}.o",
         "args": [],
         "stopAtEntry": true, // 选为true则会在打开控制台后停滞，暂时不执行程序
         "cwd": "${workspaceFolder}",
