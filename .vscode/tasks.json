@@ -6,10 +6,10 @@
         "label": "testMake", // 任务名字
         "command": "gcc", // 执行的命令
         "args": [
-         // "-g",
+         // "-g",  // 加上这行就是debug 模式
           "${file}",
           "-o",
-          "${fileDirname}/${fileBasenameNoExtension}"
+          "${fileDirname}/${fileBasenameNoExtension}.o"
         ],
         "options": {
           "cwd": "${workspaceFolder}"
