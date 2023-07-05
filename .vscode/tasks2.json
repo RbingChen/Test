@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "type": "shell", // 表明任务执行的是 shell命令
+        "label": "testMake", // 任务名字
+        "command": "g++", // 执行的命令
+        "args": [
+          "-std=c++11",
+          "-stdlib=libc++",
+          "-g",
+          "${file}",
+          "-o",
+          "${fileDirname}/${fileBasenameNoExtension}"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": ["$gcc"], // 使用gcc捕获错误
+        "group": {
+          "kind": "build",
+          "isDefault": true
+          // 任务分组，因为是tasks而不是task，意味着可以连着执行很多任务
+          // 在build组的任务们，可以通过在Command Palette(F1) 输入run build task来运行
+          // 当然，如果任务分组是test，你就可以用run test task来运行 
+        }
+      }
+    ]
+  }
