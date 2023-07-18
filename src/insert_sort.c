@@ -48,7 +48,7 @@ static void test()
         printf("%d ",arr[i]);
     }
     printf("\n");
-    
+
     insertionSort(arr, size);
     for (int i = 0; i < size - 1; ++i)
     {
